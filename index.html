@@ -1,13 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PlayByWeather</title>
   <link rel="stylesheet" href="./styles.css">
 </head>
+
 <body>
-  
+  <form action="#">
+    <label for="country">*Select Country</label>
+    <select name="country" id="country-select">
+      <option value="ZW" selected>Zimbabwe</option>
+      <option value="US">United States</option>
+      <option value="NG">Nigeria</option>
+      <option value="SO">Somalia</option>
+      <option value="AO">Angola</option>
+      <option value="BR">Brazil</option>
+      <option value="CG">Congo</option>
+    </select>
+    <label for="year">*Enter a year</label>
+    <input type="text" id="year" required>
+    <input type="submit" value="GET POPPING ARTISTS FROM THAT COUNTRY FOR THAT YEAR">
+  </form>
+
+  <section class="videos">
+    <ul class="videoList">
+    </ul>
+  </section>
+
   <script type="module" src="./index.js"></script>
 </body>
+
 </html>
