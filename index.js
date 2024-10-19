@@ -1,4 +1,4 @@
-// const { YT_API_KEY } = require("./key.js");
+
 import {
   YT_API_KEY,
   SPOTIFY_CLIENT_SECRET,
@@ -9,7 +9,7 @@ import { codeVerifier, codeChallenge } from './codeVerifier.js';
 
 // const clientId = 'YOUR_CLIENT_ID';
 const redirectUri = 'https://trialnerr.github.io/playByWeather/';
-// const redirectUri = 'http://127.0.0.1:5500'; 
+// const redirectUri = 'http://127.0.0.1:5500';
 const scope = 'user-read-private user-read-email';
 const authUrl = new URL('https://accounts.spotify.com/authorize');
 
@@ -121,13 +121,13 @@ async function getUserData() {
     code_challenge: codeChallenge,
     redirect_uri: redirectUri,
   };
-  console.log('before', authUrl.toString()); 
+  console.log('before', authUrl.toString());
   authUrl.search = new URLSearchParams(params).toString();
-  console.log('after', authUrl.toString()); 
+  console.log('after', authUrl.toString());
   window.location.href = authUrl.toString();
 }
 
-getUserData();
+// getUserData();
 
 async function apiCall(e) {
   e.preventDefault();
