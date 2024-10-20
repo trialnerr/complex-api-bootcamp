@@ -4,15 +4,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PlayByWeather</title>
+  <title>Translate something</title>
   <link rel="stylesheet" href="./styles.css">
 </head>
-
 <body>
-  
+  <label for="country">Enter country</label>
+  <input type="text" id="country">
+  <label for="text">Enter text you want to translate</label>
+  <textarea name="text" id="text"></textarea>
+  <button id="btn">Translate</button>
+  <h2>Translated text</h2>
+  <p class="langsSpoken"></p>
+  <p class="translatableLangs"></p>
+  <p class="translated"></p>
+
 
   <script type="module" src="./index.js"></script>
-  <!-- <script type="module" src="./key.js"></script> -->
 </body>
 
 </html>
