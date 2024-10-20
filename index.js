@@ -87,29 +87,29 @@ async function getSpotifyData() {
   }
 }
 
-async function getSpotifyAccessToken() {
-  const url = 'https://accounts.spotify.com/api/token';
-  const urlParams = new URLSearchParams({
-    grant_type: 'client_credentials',
-    client_id: SPOTIFY_CLIENT_ID,
-    client_secret: SPOTIFY_CLIENT_SECRET,
-  });
+// async function getSpotifyAccessToken() {
+//   const url = 'https://accounts.spotify.com/api/token';
+//   const urlParams = new URLSearchParams({
+//     grant_type: 'client_credentials',
+//     client_id: SPOTIFY_CLIENT_ID,
+//     client_secret: SPOTIFY_CLIENT_SECRET,
+//   });
 
-  try {
-    const response = await fetch(url, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
-      body: urlParams.toString(),
-    });
+//   try {
+//     const response = await fetch(url, {
+//       method: 'POST',
+//       headers: {
+//         'Content-Type': 'application/x-www-form-urlencoded',
+//       },
+//       body: urlParams.toString(),
+//     });
 
-    const data = await response.json();
-    console.log(JSON.stringify(data, null, 2));
-  } catch (error) {
-    console.error(error);
-  }
-}
+//     const data = await response.json();
+//     console.log(JSON.stringify(data, null, 2));
+//   } catch (error) {
+//     console.error(error);
+//   }
+// }
 
 async function getUserData() {
   window.localStorage.setItem('code_verifier', codeVerifier);
@@ -127,7 +127,7 @@ async function getUserData() {
   window.location.href = authUrl.toString();
 }
 
-// getUserData();
+getUserData();
 
 async function apiCall(e) {
   e.preventDefault();
